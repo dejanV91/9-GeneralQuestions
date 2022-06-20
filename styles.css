@@ -1,0 +1,127 @@
+/* font for title */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* font for questions */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+:root{
+    --ffTitle:'Kaushan Script', cursive;
+    --ffQuestions: 'Montserrat', sans-serif;
+    --colorTitle: rgb(252, 197, 135);
+    --backgrondColor: rgb(231, 248, 234);
+    --colorText: rgb(49, 49, 49);
+}
+
+
+html{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--backgrondColor);
+    display: grid;
+    place-items: center;
+}
+
+main{
+    text-align: center;
+    width: 55%;
+}
+
+.title-section h2{
+    text-transform: capitalize;
+    font-family: var(--ffTitle);
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: var(--colorTitle);
+    margin-top: 0;
+}
+
+
+
+.btn{
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 7px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media (max-width: 800px) {
+    .btn{
+        min-width: 500px;
+    }
+    .title-section h2{
+        white-space: nowrap;
+    }
+
+    .hiddenArticle{
+        min-width: 500px;
+    }
+}
+
+.btn h3{
+    text-transform: capitalize;
+    color: var(--colorText);
+    font-family:var(--ffQuestions);
+    font-weight: 200;
+}
+
+.btn .adder{
+    border: 3px solid var(--colorTitle);
+    width: 30px;
+    height: 30px;
+    display: grid;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn .adder:hover{
+    transform: rotate(90deg);
+}
+
+.adder i{
+    width: 25px;
+    height: 25px;
+    color: var(--colorTitle);
+
+}
+
+/* Hidden Article */
+
+.hiddenArticle{
+    background-color: white;
+    position: relative;
+    top: -30px;
+    padding: 20px 20px;
+    font-family: var(--ffQuestions);
+    color: var(--colorText);
+    text-align: left;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    display: block;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 8px 0px;
+
+}
+
+.showHidden{
+    display:block;
+}
+
+.hiddenArticle::before{
+    content: " ";
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    position: absolute;
+    top: 3px;
+}
