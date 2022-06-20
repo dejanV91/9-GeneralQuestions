@@ -83,7 +83,7 @@ main{
     justify-content: center;
     background: none;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.4s linear;
 }
 
 .btn .adder:hover{
@@ -109,7 +109,7 @@ main{
     text-align: left;
     border-bottom-right-radius:10px ;
     border-bottom-left-radius: 10px;
-    display: block;
+    display: none;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 8px 0px;
 
 }

@@ -1,5 +1,13 @@
 const addButton= document.querySelectorAll(".adder");
-const hiddenTaxt=document.querySelectorAll(".hiddenArticle");
 
 
-console.log(hiddenTaxt);
+addButton.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+       const parentElem=e.currentTarget.parentNode.parentNode;
+       const hiddenElem=parentElem.children.item(1)
+       hiddenElem.classList.toggle("showHidden");
+        
+    })
+});
+
+
