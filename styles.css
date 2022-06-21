@@ -32,6 +32,11 @@ main{
     width: 55%;
 }
 
+.center{
+    text-align: center;
+    min-width: 70%;
+}
+
 .title-section h2{
     text-transform: capitalize;
     font-family: var(--ffTitle);
@@ -39,6 +44,11 @@ main{
     margin-bottom: 50px;
     color: var(--colorTitle);
     margin-top: 0;
+}
+
+.question{
+    min-width: 70%;
+    
 }
 
 
@@ -52,6 +62,7 @@ main{
     margin-bottom: 20px;
     padding: 7px 20px;
     border-radius: 10px;
+    max-width: 70%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -76,26 +87,24 @@ main{
 }
 
 .btn .adder{
+    border:transparent;
+    background: transparent;
+}
+
+.btn .adder .material-symbols-outlined{
     border: 3px solid var(--colorTitle);
     width: 30px;
     height: 30px;
-    display: grid;
-    justify-content: center;
     background: none;
     cursor: pointer;
     transition: 0.4s linear;
+    color: var(--colorTitle);
 }
 
-.btn .adder:hover{
+.btn .adder .material-symbols-outlined:hover{
     transform: rotate(90deg);
 }
 
-.adder i{
-    width: 25px;
-    height: 25px;
-    color: var(--colorTitle);
-
-}
 
 /* Hidden Article */
 
@@ -106,17 +115,14 @@ main{
     padding: 20px 20px;
     font-family: var(--ffQuestions);
     color: var(--colorText);
-    text-align: left;
+    /* text-align: left; */
     border-bottom-right-radius:10px ;
     border-bottom-left-radius: 10px;
-    display: none;
+    display: block;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 8px 0px;
-
+    max-width: 70%;
 }
 
-.showHidden{
-    display:block;
-}
 
 .hiddenArticle::before{
     content: " ";
@@ -124,4 +130,8 @@ main{
     border: 1px solid rgba(0, 0, 0, 0.075);
     position: absolute;
     top: 3px;
+}
+
+.material-symbols-outlined .remove{
+    display: none;
 }
