@@ -27,14 +27,9 @@ body{
     place-items: center;
 }
 
-main{
-    text-align: center;
-    width: 55%;
-}
-
 .center{
     text-align: center;
-    min-width: 70%;
+    width: 60%;
 }
 
 .title-section h2{
@@ -44,27 +39,27 @@ main{
     margin-bottom: 50px;
     color: var(--colorTitle);
     margin-top: 0;
+    min-width: 100%;
 }
 
 .question{
-    min-width: 70%;
-    
+    min-width: 100%;
+    box-sizing: border-box;
 }
-
 
 
 .btn{
-    display: flex;
-    white-space: nowrap;
-    justify-content: space-between;
+    position: relative;
+    display:flex;
+    justify-content:space-around ;
     background-color: white;
     align-items: center;
     margin-bottom: 20px;
-    padding: 7px 20px;
     border-radius: 10px;
-    max-width: 70%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+
 
 @media (max-width: 800px) {
     .btn{
@@ -84,43 +79,43 @@ main{
     color: var(--colorText);
     font-family:var(--ffQuestions);
     font-weight: 200;
+    
 }
 
-.btn .adder{
-    border:transparent;
-    background: transparent;
-}
 
-.btn .adder .material-symbols-outlined{
+.buttons {
     border: 3px solid var(--colorTitle);
-    width: 30px;
-    height: 30px;
-    background: none;
     cursor: pointer;
     transition: 0.4s linear;
     color: var(--colorTitle);
+    margin-left: 120px;
+    height: 25px;
+    
 }
 
-.btn .adder .material-symbols-outlined:hover{
+
+.buttons:hover{
     transform: rotate(90deg);
 }
 
 
+
 /* Hidden Article */
 
-.hiddenArticle{
+.show-text .hiddenArticle{
+    position: absolute;
+    left: 0;
+    top:50px;
     background-color: white;
-    position: relative;
-    top: -30px;
     padding: 20px 20px;
     font-family: var(--ffQuestions);
     color: var(--colorText);
-    /* text-align: left; */
+    text-align: left;
     border-bottom-right-radius:10px ;
     border-bottom-left-radius: 10px;
     display: block;
+    z-index: 5;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 8px 0px;
-    max-width: 70%;
 }
 
 
@@ -132,6 +127,18 @@ main{
     top: 3px;
 }
 
-.material-symbols-outlined .remove{
+.hiddenArticle{
+    display: none;
+}
+
+.remove{
+    display: none;
+}
+
+.show-text .remove{
+    display:block;
+}
+
+.show-text .adder{
     display: none;
 }
