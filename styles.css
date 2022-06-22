@@ -61,9 +61,21 @@ body{
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
+
+    body{
+        display:block;
+        margin: 80px 20px;
+
+    }
+    .center{
+        min-width:500px ;
+    }
+
+    
     .btn{
         min-width: 500px;
+        padding: 0 20px;
     }
     .title-section h2{
         white-space: nowrap;
@@ -71,6 +83,9 @@ body{
 
     .hiddenArticle{
         min-width: 500px;
+    }
+    .btn h3{
+        white-space: nowrap;
     }
 }
 
